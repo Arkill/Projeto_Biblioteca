@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Digital</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="cookie.css">
+    <link rel="stylesheet" href="cards.css">
+    <script defer src="app.js"></script>
+    <script defer src="cookie.js"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <img src="1623683.svg" alt="Ícone da biblioteca">
+                <a href="/">Biblioteca Virtual</a>
+            </div>
+            <div class="mobilemenu">
+                <button class="hamburger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </button>
+            </div>
+            <ul class="nav-list">
+                <li><a href="#" class="menu">Login</a></li>
+                <li><a href="#" class="menu">Artigos</a></li>
+                <li><a href="#" class="menu">Acervo Digital</a></li>
+                <li><a href="#" class="menu">Exposições</a></li>
+                <li><a href="#" class="menu">Baixar</a></li>
+                <li><a href="#" class="menu">Sobre nós</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Barra inferior -->
+    <div id="bottom-bar"></div>
+    <!-- Resto do conteúdo -->
+    <div class="cookis-msg" id="cookis-msg">
+        <div class="cookis-txt">
+            <p>Utilizamos cookies para melhorar sua experiência de navegação, personalizar conteúdos e anúncios, fornecer funcionalidades de redes sociais e analisar nosso tráfego. Também compartilhamos informações sobre o uso do nosso site com nossos parceiros de redes sociais, publicidade e análise. Ao continuar a usar nosso site, você concorda com o uso de cookies. Para mais informações, acesse nossa <a href="link_para_politica">Política de Cookies</a>.</p>
+            <div class="cookis-btn">
+                <button id="accept-cookies">Aceito</button>
+            </div>
+        </div>
+    </div>
+    <main></main>
+    <div class="slider">
+        <div class="slides">
+            <!-- radio botão -->
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+
+            <div class="slide first">
+                <img src="https://th.bing.com/th/id/OIP.SrRcbq9grR5h72LlpHf5aAHaLZ?rs=1&pid=ImgDetMain" alt="img01"/>
+            </div>
+            <div class="slide">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1685735029i/60787996.jpg" alt="img02"/>
+            </div>
+            <div class="slide">
+                <img src="https://images.thenile.io/r1000/9780141335391.jpg" alt="img03"/>
+            </div>
+            <div class="slide">
+                <img src="https://livrariadavila.vteximg.com.br/arquivos/ids/393594-1000-1000/9788594541758.jpg?v=637358891694030000" alt="img04"/>
+            </div>
+
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+            </div>
+        </div>
+
+        <div class="manual-navigation">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+        </div>
+    </div>
+
+    <div id="conteudo"></div>
+    <section class="info1 box-home">
+        <div class="ui-container">
+            <div class="row acervo-row">
+                <div class="acervo-item item-up">
+                    <div class="acervo-item__text">Um acervo de eBooks com <span>milhares de histórias surpreendentes</span></div>
+                </div>
+                <div class="acervo-item item-up">
+                    <div class="cicle1">
+                        <p class="cicle-num1">+ 15 mil</p>
+                        <span>títulos</span>
+                    </div>
+                </div>
+                <div class="acervo-item item-up">
+                    <div class="cicle2">
+                        <p class="cicle-num2">+ 400</p>
+                        <span>usuários</span>
+                    </div>
+                </div>
+                <div class="acervo-item item-up">
+                    <div class="cicle3">
+                        <p class="cicle-num3">+ 950</p>
+                        <span>instituições parceiras</span>
+                    </div>
+                </div>
+                <div class="acervo-item item-up">
+                    <div class="cicle4">
+                        <p class="cicle-num4">+ 80</p>
+                        <span>editoras parceiras</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="card">
+            <div class="overlay"></div>
+            <div class="circle">
+                <svg height="60px" width="60px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                viewBox="0 0 233.003 233.003" xml:space="preserve">
+             <g>
+               <path d="M58.24,201.255H47.904c-2.761,0-5,2.238-5,5c0,2.762,2.239,5,5,5H58.24c2.761,0,5-2.238,5-5
+                 C63.24,203.493,61.001,201.255,58.24,201.255z"/>
+               <path d="M210.503,3.755H42.513c-12.407,0-22.5,10.094-22.5,22.5v45.007H15.5c-8.547,0-15.5,6.953-15.5,15.5
+                 v126.986c0,8.547,6.953,15.5,15.5,15.5h75.145c8.547,0,15.5-6.953,15.5-15.5v-11.167h54.529h22.167c4.142,0,7.5-3.357,7.5-7.5
+                 c0-4.143-3.358-7.5-7.5-7.5h-22.167v-14.334h49.829c12.407,0,22.5-10.094,22.5-22.5V26.255
+                 C233.003,13.849,222.91,3.755,210.503,3.755z M15.5,86.262h75.145c0.257,0,0.5,0.243,0.5,0.5v98.779H15V86.762
+                 C15,86.505,15.243,86.262,15.5,86.262z M90.645,214.248H15.5c-0.257,0-0.5-0.243-0.5-0.5v-18.207h76.145v18.207
+                 C91.145,214.005,90.901,214.248,90.645,214.248z M145.674,187.581h-38.333v-14.334h38.333V187.581z M218.003,150.747
+                 c0,4.136-3.364,7.5-7.5,7.5H106.145V86.762c0-8.547-6.953-15.5-15.5-15.5H35.013V26.255c0-4.136,3.364-7.5,7.5-7.5h167.99
+                 c4.136,0,7.5,3.364,7.5,7.5V150.747z"/>
+             </g>
+           </svg>
+            </div>
+            <p>User Experience</p>
+        </div>
+        <div class="card">
+            <div class="overlay"></div>
+            <div class="circle">
+                <svg fill="#000000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                width="60px" height="60px" viewBox="0 0 97.391 97.391" xml:space="preserve">
+             <g>
+               <path d="M0,7.573h17.5v8.75H0V7.573z M0,19.823h17.5v59.501H0V19.823z M3.208,68.312c0,3.021,2.447,5.47,5.469,5.47
+                 c3.021,0,5.469-2.447,5.469-5.47s-2.448-5.47-5.469-5.47C5.655,62.843,3.208,65.293,3.208,68.312z M0,89.824h17.5v-7H0V89.824z
+                 M21,81.6v1.225v7h22.75v-8.268c-0.929-0.664-3.815-2.232-10.5-2.232C26.913,79.324,22.866,80.744,21,81.6z M21,31.257
+                 c1.866,0.854,5.913,2.276,12.25,2.276c6.643-0.001,9.536-1.55,10.5-2.245v-6.215H21V31.257z M21,35.046V77.81
+                 c2.534-0.948,6.592-1.985,12.25-1.985c5.105,0,8.417,0.854,10.5,1.767V35.268c-2.083,0.91-5.395,1.765-10.5,1.765
+                 C27.592,37.031,23.534,35.994,21,35.046z M80.859,7.18l-12,2.462l1.76,8.571l12-2.462L80.859,7.18z M95.279,77.469l-11.998,2.463
+                 L71.32,21.643l12-2.462L95.279,77.469z M91.116,67.08c-0.607-2.957-2.972-4.971-5.275-4.498c-2.307,0.475-3.688,3.258-3.077,6.215
+                 c0.606,2.957,2.969,4.973,5.274,4.498C90.346,72.822,91.725,70.041,91.116,67.08z M95.984,80.893l-12.002,2.464l1.408,6.854
+                 l12-2.463L95.984,80.893z M49,16.323h17.5v-8.75H49V16.323z M49,89.824h17.5v-7H49V89.824z M49,70.574h17.5V28.573H49V70.574z
+                 M49,79.324h17.5v-5.25H49V79.324z M49,25.073h17.5v-5.25H49V25.073z"/>
+             </g>
+           </svg>
+            </div>
+            <p>Integração</p>
+        </div>
+        <div class="card">
+            <div class="overlay"></div>
+            <div class="circle">
+                <svg width="60px" height="60px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 10L12 4.5L22 10L17.9457 12.2298M2 10L6.05427 12.2298M2 10V16M6 17.5V12.5C6 12.4084 6.01848 12.3182 6.05427 12.2298M6 17.5C6 18.6046 8.68629 19.5 12 19.5C15.3137 19.5 18 18.6046 18 17.5M6 17.5C6 16.3954 8.68629 15.5 12 15.5C15.3137 15.5 18 16.3954 18 17.5M18 17.5V12.5C18 12.4084 17.9815 12.3182 17.9457 12.2298M17.9457 12.2298C17.9334 12.1993 17.9189 12.1691 17.9025 12.139C17.3927 11.2067 14.9439 10.5 12 10.5C9.05606 10.5 6.60733 11.2067 6.09749 12.139C6.08105 12.1691 6.06663 12.1993 6.05427 12.2298" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+            </div>
+            <p>Aprovado pelo MEC</p>
+        </div>
+        <div class="card">
+            <div class="overlay"></div>
+            <div class="circle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="78" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                </svg>
+            </div>
+            <p>Profile</p>
+        </div>
+    </div>
+    </body>
+    </html>
+    <footer>
+        <div id="footer_content">
+            <div id="footer_contacts">
+                <h1>Biblioteca Virtual</h1>
+                <p>It's all about your dreams.</p>
+                <div id="footer_social_media">
+                    <a href="#" class="footer-link" id="instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="footer-link" id="facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="footer-link" id="linkedin"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" class="footer-link" id="X"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+            <ul class="footer-list">
+                <li><h3>Blog</h3></li>
+                <li><a href="#" class="footer-link">Criação</a></li>
+                <li><a href="#" class="footer-link">Desenvolvimento</a></li>
+                <li><a href="#" class="footer-link">Parcerias</a></li>
+            </ul>
+            <ul class="footer-list">
+                <li><h3>Products</h3></li>
+                <li><a href="#" class="footer-link">App</a></li>
+                <li><a href="#" class="footer-link">Desktop</a></li>
+                <li><a href="#" class="footer-link">Cloud</a></li>
+            </ul>
+            <div id="footer_sub">
+                <h3>Inscreva-se</h3>
+                <p>Entre com seu email para receber nossas notícias e informações</p>
+                <div id="input_group">
+                    <input type="email" id="email">
+                    <button>
+                        <i class="fa-regular fa-envelope"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="footer_copyright"> 
+            &#169; 2024 Todos os direitos reservados 
+        </div>
+    </footer>
+    <script src="navigation-auto.js"></script>
+    <script src="scroll.js"></script>
+</body>
+</html>

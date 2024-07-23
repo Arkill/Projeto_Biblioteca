@@ -1,0 +1,500 @@
+/* Estilos gerais */
+body {
+    margin-top: 100px;
+    height: 100%;
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: rgb(164, 136, 94);
+}
+
+header {
+    width: 100%;
+    background-color: burlywood;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Adicionado para garantir que padding e border sejam contabilizados no tamanho total */
+    letter-spacing: 1px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+#img1{
+    width: 3000px;
+}
+
+.logo a {
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+    color: black;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+    border-radius: 10%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.mobilemenu {
+    cursor: pointer;
+    display: none;
+}
+
+.mobilemenu div {
+
+    width: 32px;
+    height: 2px;
+    background: black;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+nav {
+    max-width: 1280px;
+    justify-content: space-around;
+    align-items: center;
+    background: burlywood;
+    height: 70px;
+    margin-inline: auto;
+    display: flex;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    margin-left: 0;
+}
+
+.nav-list a {
+    padding-block: 16px;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 40px;
+    color: black;
+    position: relative;
+}
+
+.nav-list li::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: black;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: all .5s ease;
+    bottom: -5px;
+    left: 0;
+}
+
+.nav-list li:hover::before {
+    transform: scaleX(1);
+}
+
+.slider {
+    margin: 0 auto;
+    width: 100%; /* Ajustado para ser responsivo */
+    max-width: 70%;
+    height: 500px; /* Ajuste conforme necessário */
+    overflow: hidden;
+    position: relative;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    min-width: 100%;
+    transition: 2s;
+}
+
+.slide img {
+    width: 100%;
+    max-height: 100%;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.manual-navigation,
+.navigation-auto {
+    position: absolute;
+    width: 100%;
+    max-width: 100%;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid black;
+    padding: 6px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+    width: 13px;
+    height: 13px;
+}
+
+.navigation-auto div {
+    border: 2px solid black;
+    padding: 6px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+    width: 13px;
+    height: 13px;
+}
+
+.manual-btn:not(:last-child),
+.navigation-auto div:not(:last-child) {
+    margin-right: 10px;
+}
+
+.manual-btn:hover,
+.navigation-auto div:hover {
+    background-color: black;
+}
+
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+    margin-left: -100%;
+}
+
+#radio3:checked ~ .first {
+    margin-left: -200%;
+}
+
+#radio4:checked ~ .first {
+    margin-left: -300%;
+}
+
+/* outros radios */
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+    background-color: black;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+    background-color: black;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+    background-color: black;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+    background-color: black;
+}
+/* Container principal */
+#conteudo {
+    padding: 10px;
+    background-color: rgb(164, 136, 94); /* Mude conforme necessário */
+}
+
+.info1.box-home {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #fff8e1; /* Mude conforme necessário */
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.acervo-row {
+    display: flex;
+    justify-content: space-around; /* Distribui os itens igualmente com espaço ao redor */
+    flex-wrap: wrap; /* Quebra para a próxima linha se não couberem em uma linha */
+}
+
+.acervo-item {
+    flex: 1;
+    min-width: 150px; /* garantir que não fiquem muito pequenos */
+    margin: 10px; /* Espaçamento entre os itens */
+}
+
+.acervo-item__text {
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.cicle1,.cicle2,.cicle3,.cicle4 {
+    width: 155px;
+    height: 155px;
+    background: linear-gradient(#deb887,#d3a05f,#b47b32); /* Background do círculo, mude conforme necessário */
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cicle-num1,.cicle-num2,.cicle-num3,.cicle-num4 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff; /* Cor do texto dentro do círculo */
+}
+
+.cicle1,.cicle2,.cicle3,.cicle4 span {
+    font-size: 10px;
+    color: #fff; /* Cor do texto dentro do círculo */
+}
+
+/*scroll*/
+
+.cicle-num1,.cicle-num2,.cicle-num3,.cicle-num4{
+    visibility: hidden;
+}
+
+@media (max-width: 750px) {
+    /* Ajustes para smartphones e dispositivos menores */
+    header {
+        padding: 13px 0;
+    }
+
+    .hamburger {
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+
+    .mobilemenu {
+        display: flex;
+        margin-left: 260px auto;
+        z-index: 1000;
+    }
+    .nav-list {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: #d2b48c;
+        clip-path: circle(100px at 120% -5%);
+        transition: 1s ease-out;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0;
+        pointer-events: none;
+    }
+
+    /* Barra inferior */
+#bottom-bar {
+    position: fixed;
+    bottom: -50px; /* Escondido fora da tela */
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: burlywood;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.4);
+    transition: bottom 0.3s ease;
+    z-index: 1000; /* Certifique-se de que a barra apareça acima de outros elementos */
+}
+
+#bottom-bar.show {
+    bottom: 0; /* Aparece na tela */
+}
+
+    .nav-list li {
+        margin-right: 27px;
+    }
+
+    .nav-list a{
+        font-size: 24;
+        opacity: 0;
+    }
+
+    .nav-list li:nth-child(1) a{
+        transition: 0.7s 0.4;
+    }
+    .nav-list li:nth-child(2) a{
+        transition: 0.7s 0.6;
+    }
+    .nav-list li:nth-child(3) a{
+        transition: 0.7s 0.8;
+    }
+    .nav-list li:nth-child(4) a{
+        transition: 0.7s 0.10;
+    }
+    .nav-list li:nth-child(5) a{
+        transition: 0.7s 0.14;
+    }
+    .nav-list li:nth-child(6) a{
+        transition: 0.7s 0.16;
+    }
+
+
+    /* estilos ativos */
+
+    .nav.active .nav-list {
+        clip-path: circle(1500px at 90% -15%);
+        pointer-events: all;
+        height: -100px;
+    }
+
+       .active .navlistback {
+        transform: scaleY(1);
+        pointer-events: all; /* Permite interação quando aberto */
+    }
+   
+
+    .nav.active .nav-list a {
+        opacity: 1;
+    }
+
+    /* Transforma em X */
+    
+
+.line1, .line2, .line3 {
+    width: 100%;
+    height: 2px;
+    background: black;
+    position: absolute;
+    left: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.mobilemenu {
+    display: block;
+    width: 40px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+}
+
+.line1 {
+    bottom: 46%;
+    transform: rotate(0deg);
+}
+
+.line2 {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.line3 {
+    bottom: 20%;
+    transform: rotate(0deg);
+}
+
+.open .line1 {
+    transform: rotate(-45deg) translate(-1px, 4px);
+}
+
+.open .line2 {
+    opacity: 0;
+}
+
+.open .line3 {
+    transform: rotate(45deg) translate(-1px, -5px);
+}
+
+    .logo a {
+        font-size: 20px;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        text-decoration: none;
+        color: black;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+        display: none;
+    }
+    
+    .logo img {
+        width: 70px;
+        height: auto;
+        margin-left: 30px;
+        margin-right: 60px;
+        border-radius: 10%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-list li {
+        margin-left: 50px;
+    }
+
+    .manual-navigation,
+    .navigation-auto {
+        width: 100%;
+        max-width: 100%;
+        bottom: 5px;
+    }
+
+    .manual-btn,
+    .navigation-auto div {
+        padding: 3px; /* Ajuste de espaçamento para botões menores */
+    }
+
+    .acervo-row {
+        justify-content: center; /* Centraliza os itens na linha */
+    }
+
+    .acervo-item {
+        flex-basis: 100%; /* Um item por linha em dispositivos menores */
+        margin: 10px 0;
+        text-align: center; /* Centraliza o texto dentro dos itens */
+    }
+
+    .cicle1,.cicle2,.cicle3,.cicle4 {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto; /* Centraliza horizontalmente */
+    }
+
+    .cicle-num1,.cicle-num2,.cicle-num3,.cicle-num4 {
+        font-size: 18px;
+    }
+
+    .cicle1,.cicle2,.cicle3,.cicle4 span {
+        font-size: 10px;
+    }
+}

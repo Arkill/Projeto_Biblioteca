@@ -157,6 +157,9 @@ nav {
     margin: 0 auto;
 }
 
+/* slide mobile */
+
+
 .manual-navigation,
 .navigation-auto {
     position: absolute;
@@ -299,6 +302,11 @@ nav {
     /* Ajustes para smartphones e dispositivos menores */
     header {
         padding: 13px 0;
+    }
+
+    .slider-mobile img {
+        width: 500px;
+        height: 500px;
     }
 
     .hamburger {

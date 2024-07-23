@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Noto Sans', Isans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(150deg, burlywood, rgb(222, 187, 49));
+}
+
+
+.principal {
+    display: flex;
+}
+
+.left {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.box {
+    position: relative;
+    width: 250px;
+    height: 425px;
+    transform-style: preserve-3d;
+    animation: animate 20s linear infinite;
+
+}
+
+
+@keyframes animate {
+    0%{
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    100%{
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+
+.box span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * 90deg)) translateZ(150px);
+    -webkit-box-reflect: below 3px linear-gradient(transparent, transparent, rgba(4, 4, 4, 0.267));
+}
+
+
+
+.box span img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    border-radius: 15px;
+    border: 4px double rgb(0, 0, 0);
+}
+
+img:hover{
+    transform: translateY(-2px);
+    
+}
+
+
+
+/* Parte da direita */
+.right {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    background-color: #a37e4c;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #00000056;
+}
+
+
+.image {
+    width: 35vw;
+    font-size: 3vw;
+}
+
+.card>h1 {
+    color: #000000;
+    margin: 0;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+    width: 100%;
+}
+
+.input>input {
+    width: 100%;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #cfbc73;
+    color: #060606de;
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px #00000056;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.input>label {
+    margin-bottom: 10px;
+    color: #000000de;
+    font-weight: 800;
+}
+
+.input>input::placeholder {
+    color: #00000094;
+    font-weight: 600;
+} 
+
+button {
+    width: 90%;
+    padding: 16px 0px;
+    margin: 25px;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #000000;
+    background:linear-gradient(150deg, burlywood, rgb(222, 187, 49));;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #51480c52;
+}
